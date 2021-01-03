@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/punalex01/recipeWebsite/static/css/main.a65bd9b7.chunk.css",
+    "main.js": "/punalex01/recipeWebsite/static/js/main.e59d703a.chunk.js",
+    "main.js.map": "/punalex01/recipeWebsite/static/js/main.e59d703a.chunk.js.map",
+    "runtime-main.js": "/punalex01/recipeWebsite/static/js/runtime-main.1ee72ae5.js",
+    "runtime-main.js.map": "/punalex01/recipeWebsite/static/js/runtime-main.1ee72ae5.js.map",
+    "static/js/2.e045412f.chunk.js": "/punalex01/recipeWebsite/static/js/2.e045412f.chunk.js",
+    "static/js/2.e045412f.chunk.js.map": "/punalex01/recipeWebsite/static/js/2.e045412f.chunk.js.map",
+    "index.html": "/punalex01/recipeWebsite/index.html",
+    "static/css/main.a65bd9b7.chunk.css.map": "/punalex01/recipeWebsite/static/css/main.a65bd9b7.chunk.css.map",
+    "static/js/2.e045412f.chunk.js.LICENSE.txt": "/punalex01/recipeWebsite/static/js/2.e045412f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ee72ae5.js",
+    "static/js/2.e045412f.chunk.js",
+    "static/css/main.a65bd9b7.chunk.css",
+    "static/js/main.e59d703a.chunk.js"
+  ]
+}
