@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  height: 100%;
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  border-bottom: 2px solid rgb(230,230,230);
+  height: 200px;
+  display: grid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header span {
+  margin: auto auto;
+  font-size: 100px;
+  font-family: cursive;
+  padding: 5px 200px;
+  border: solid rgb(230,230,230) 2px;
+  border-radius: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: 100%;
+  min-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sideBar {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 40px 50px;
+  grid-auto-rows: 30px;
+  border-right: solid rgb(230,230,230) 2px;
+}
+
+#newRecipeButton {
+  margin: 10px 10px;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.searchBar {
+  width: calc(100%-10px);
+  height: 20px;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+.searchBar:focus{
+  outline: none;
+}
+
+.listItem {
+  list-style-type: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: rgb(13,13,208);
+}
+
+.listItem:hover {
+  cursor: pointer;
+}
+
+.mainPage {
+  width: 100%;
+  grid-column-start: 2;
+  display: grid;
+}
+
+.centered {
+  margin: auto;
+}
+
+.addRecipePage {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.title {
+  font-size: 64px;
+  font-family: cursive;
+}
+
+.addRecipeForm {
+  padding-top: 30px;
+}
+
+.newRecipeInput {
+  margin: 0 10px;
+}
+
+.newRecipeInput:focus {
+  outline:none;
+}
+
+#nameInput {
+  width: 400px;
+  height: 30px;
+  font-size: 25px;
+}
+
+.smallInputs {
+  margin: 30px 0px;
+}
+
+.ingredientsContainer span {
+  margin-right: 90px;
+}
+
+.ingredientPairInput {
+  margin-top: 5px;
+}
+
+.ingredientInput {
+  margin-left: 0;
+}
+
+.ingredientAmountInput {
+  margin: 0;
+  width: 75px;
+}
+
+#newIngredientButton {
+  margin-top: 10px;
+}
+
+.removeButton {
+  margin-left: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+.instructionsContainer {
+  margin-top: 30px;
+}
+
+#instructionHeader {
+  margin-top: 10px;
+}
+
+.instructionItem {
+  margin: 10px 0px;
+}
+
+.instructionItem span {
+  margin-right: 5px;
+  margin-bottom: 40px;
+}
+
+.instructionItem textarea {
+  width: 500px;
+  height: 200px;
+  font-family: Arial;
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.submitButton {
+  /* margin-bottom: 10px;
+  height: 100px;
+  width: 400px; */
+}
+
+#deleteButton {
+  color: red;
+  border: 1px solid red;
+  border-radius: 3px;
+  float: right;
+  margin: 30px 20px;
+}
+
+.displayRecipePage {
+  margin: 10px;
+  display: grid;
+  grid-template-rows: 200px 40px;
+
+}
+
+.titleImageContainer {
+  display: grid;
+  grid-template-columns: 250px 100%;;
+}
+
+.recipeImageContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.recipeImage {
+  width: 95%;
+  min-height: 95%;
+  min-width: 95%;
+  min-height: 95%;
+  border: black 1px solid;
+  border-radius: 10px;
+  margin: auto auto;  
+}
+
+.displaySmallContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 33%;
+  border-top: solid rgb(230,230,230) 1px;
+  border-bottom: solid rgb(230,230,230) 1px;
+  margin-top: 10px;
+}
+
+.displaySmallContainer span {
+  margin: auto;
+  padding: 0px 30px;
+  border-left: solid rgb(230,230,230) 1px;
+  border-right: solid rgb(230,230,230) 1px;
+}
+
+.displayIngredients {
+  margin: 30px auto;
+}
+
+.displayIngredients header{
+  margin: 0px;
+}
+
+.displayIngredients ul {
+  padding: 0px;
+}
+
+.displayInstructions {
+  margin: 0px auto;
+}
+
+.displayInstructions header {
+  margin: 0px;
+}
+
+.displayInstructions li {
+  margin-top: 10px;
+}
+
+#editRecipeButton {
+  margin: auto;
+  background: white;
+  height: 50px;
+  width: 200px;
+  border-radius: 12px;
+}
+
+.button {
+  color: rgb(22,184,118);
+  border: solid rgb(22,184,118) 2px;
+  background: white;
+}
+
+.button:hover{
+  color: rgb(4, 155, 99);
+  border: solid rgb(4, 155, 99) 2px;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
