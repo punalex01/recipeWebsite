@@ -14,7 +14,7 @@ function App() {
         () => resolve(    
       Axios({
       method: "GET",
-      url: "http://localhost:5000/getRecipes",
+      url: "https://recipe-nodejs.herokuapp.com/getRecipes",
     }).then(res => {
       changeRecipeList(res.data);
     })), 100));
@@ -98,7 +98,7 @@ function App() {
       document.getElementById("submitButton").setAttribute("disabled", true);
       Axios({
         method: "POST",
-        url: "http://localhost:5000/addRecipe",
+        url: "https://recipe-nodejs.herokuapp.com/addRecipe",
         header: {
           "content-type": "multipart/form-data"
         },
@@ -112,7 +112,7 @@ function App() {
       document.getElementById("submitButton").setAttribute("disabled", true);
       Axios({
         method: "POST",
-        url: "http://localhost:5000/addRecipe",
+        url: "https://recipe-nodejs.herokuapp.com/addRecipe",
         header: {
           "content-type": "multipart/form-data"
         },
@@ -131,7 +131,7 @@ function App() {
     if (recipeId > 0) {
       Axios({
         method: "POST",
-        url: "http://localhost:5000/deleteRecipe",
+        url: "https://recipe-nodejs.herokuapp.com/deleteRecipe",
         header: {
           "content-type": "application/x-www-form-urlencoded"
         },
@@ -146,7 +146,7 @@ function App() {
   function selectRecipe(recipeId) {
     Axios({
       method: "GET",
-      url: "http://localhost:5000/selectRecipe?recipeId="+recipeId.toString(),
+      url: "https://recipe-nodejs.herokuapp.com/selectRecipe?recipeId="+recipeId.toString(),
     }).then(res => {
       setRecipe(res.data);
       setMainPage("DisplayRecipe");
