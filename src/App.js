@@ -7,7 +7,6 @@ import DisplayRecipePage from './DisplayRecipePage';
 import Axios from 'axios';
 
 function App() {
-
   const getAsyncRecipes = () => 
     new Promise(resolve => 
       setTimeout(
@@ -17,7 +16,7 @@ function App() {
       url: "https://recipe-nodejs.herokuapp.com/getRecipes",
     }).then(res => {
       changeRecipeList(res.data);
-    })), 100));
+    })), 10000));
 
   // sets which page to show
   const [pageType, setMainPage] = React.useState("Home");
